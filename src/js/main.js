@@ -39,7 +39,6 @@ const taskInput = document.getElementById('taskInput');
 function createTask () {
   const tasksList = document.getElementById('tasksList');
   const taskText = taskInput.value;
-  console.log(taskText)
   if (space(taskText))  {
     const newLi = document.createElement('li');
     newLi.classList.add('tasks__item');
@@ -133,7 +132,6 @@ addEventListener('click', function (e) {
 })
 
 addEventListener('keypress', function (e) {
-  console.log(e.target)
   if (e.target.classList.contains('tasks__edit-input')  && e.key === 'Enter') {
     updateTask(e.target)
   }
@@ -162,7 +160,6 @@ doneBtn.onclick = function() {
   let newDoneList = Array.from(tasksLi).filter(function (item, index, array) {
     return item.firstElementChild.classList.contains('checked');
   })
-  console.log(newDoneList)
   let doneList = document.getElementById('doneList');
   for (let d of newDoneList) {
     let node = document.createElement('li');
