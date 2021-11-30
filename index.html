@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDoList</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<div class="wrapper">
+    <header class="controls">
+        <div class="container">
+            <h1 class="controls__title">To do list</h1>
+            <div class="controls__new-task">
+                <label for="taskInput"></label>
+                <input type="text" value="" id="taskInput" class="controls__task-input task-input" autofocus placeholder="Enter the task">
+                <button class="controls__add sm-button" id="addBtn">Add</button>
+            </div>
+            <div class="controls__buttons">
+                <button class="controls__check-button button">Check all/Uncheck</button>
+                <button class="controls__done-button button">Done checked</button>
+                <button class="controls__del-button button">Delete checked</button>
+            </div>
+        </div>
+    </header>
+    <section class="tasks">
+        <div class="container">
+            <h2 class="tasks__title">Task list</h2>
+            <ul class="tasks__list" id="tasksList">
+            </ul>
+        </div>
+    </section>
+    <section class="done">
+        <div class="container">
+            <h2 class="tasks__title">Done list</h2>
+            <ul class="done__list" id="doneList">
+            </ul>
+            <p>* Очистить все списки: CTRL+D</p>
+        </div>
+    </section>
+</div>
+<script src="assets/js/libs.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

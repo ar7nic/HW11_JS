@@ -1,0 +1,13 @@
+@mixin current-font($size,$weight,$lh) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lh;
+}
+
+@mixin adaptiv-font($pcSize, $mobSize, $fWeight) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+  font-weight: $fWeight;
+}
+

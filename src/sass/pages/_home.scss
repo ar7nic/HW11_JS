@@ -1,0 +1,68 @@
+.tasks {
+  flex: 1 1 auto;
+  padding: 30px 0px;
+  &__list:nth-child(odd) {
+    background-color: #000000;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &:nth-child(odd) {
+      background-color: $secondary-color;
+    }
+  }
+  &__box {
+    content: "";
+    height: 50px;
+    flex: 0 0 50px;
+    background-color: #ffffff;
+    border: 8px solid $background-color;
+    cursor: pointer;
+  }
+  &__box::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    height: 14px;
+    width: 14px;
+    background-color: #B2D6EA;
+    transform: scale(0);
+    transition: 500ms;
+    cursor: pointer;
+  }
+  &__text {
+    flex: 1 1 100%;
+    padding: 5px 15px;
+  }
+}
+
+.checked.tasks__box::after {
+  transform: scale(1);
+  transition: 500ms;
+}
+
+.task-input {
+  height: 50px;
+  width: 100%;
+  font-size: 18px;
+  padding: 0 15px;
+}
+
+.done {
+  &__item {
+    @include current-font(16px,100,150%);
+    list-style: circle;
+  }
+  p {
+    color: rgba(#000000,0.4);
+    padding: 10px;
+  }
+}
+
+h2 {
+  padding-bottom: 20px;;
+}
+
